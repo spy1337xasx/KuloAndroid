@@ -5,7 +5,7 @@ pkg update -y && pkg upgrade -y
 pkg install -y wget openssl curl libenet liblua53
 
 echo "[*] Downloading proxy binary..."
-wget https://github.com/KULLANICI_ADIN/REPO_ADIN/raw/main/proxy_linux -O proxy_linux
+wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/proxy_linux -O proxy_linux
 
 echo "[*] Setting permissions..."
 chmod +x proxy_linux
