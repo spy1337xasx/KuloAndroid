@@ -1,15 +1,42 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=Growtopia+Android+Proxy;Termux+%7C+Fast+%7C+Free" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&pause=1000&color=00D9FF&center=true&vCenter=true&width=700&lines=KuloAndroid+Proxy;Growtopia+%7C+Android+%7C+Termux" alt="Typing SVG" />
 
 <br/>
 
 ![Platform](https://img.shields.io/badge/Platform-Android-brightgreen?style=for-the-badge&logo=android)
 ![Shell](https://img.shields.io/badge/Shell-Bash-blue?style=for-the-badge&logo=gnu-bash)
-![License](https://img.shields.io/badge/License-Paid-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Paid-red?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
-> **Growtopia için Android üzerinde çalışan hızlı ve kolay kurulumlu proxy.**
+<br/>
+
+> **Android üzerinde Termux ile çalışan Growtopia Proxy.**
+
+</div>
+
+---
+
+## 💎 LİSANS SATIN AL / BUY LICENSE
+
+<div align="center">
+
+---
+
+### 🇹🇷 Bu proxy **ücretlidir** ve lisans satın alınmadan kullanılamaz.
+### 🇺🇸 This proxy is **paid** and cannot be used without purchasing a license.
+
+---
+
+# 🛒 [discord.gg/Kulo](https://discord.gg/Kulo)
+
+---
+
+> 🇹🇷 Lisans satın almak için yukarıdaki Discord sunucumuza katıl ve yetkililere ulaş.
+
+> 🇺🇸 Join our Discord server above to purchase a license and contact our staff.
+
+---
 
 </div>
 
@@ -20,6 +47,7 @@
 - [Gereksinimler](#-gereksinimler)
 - [Kurulum](#-kurulum)
 - [Kullanım](#-kullanım)
+- [Host Dosyası](#-host-dosyası)
 - [Sorun Giderme](#-sorun-giderme)
 - [Notlar](#-notlar)
 
@@ -27,74 +55,68 @@
 
 ## 📦 Gereksinimler
 
-| Uygulama | İndirme Linki |
-|----------|--------------|
+| Uygulama | Link |
+|----------|------|
 | 📱 **Termux** | [GitHub Releases](https://github.com/termux/termux-app/releases) |
-| 🌐 **PowerTunnel** (VPN bypass) | [İndir](https://github.com/krlvm/PowerTunnel-Android/releases/download/v2.6.3/PowerTunnel.apk) |
-| 🔗 **Virtual Hosts** (Host yönlendirme) | [İndir](https://github.com/x-falcon/Virtual-Hosts/releases/download/2.1.0/app-Github-release.apk) |
+| 🌐 **PowerTunnel** | [İndir](https://github.com/krlvm/PowerTunnel-Android/releases/download/v2.6.3/PowerTunnel.apk) |
+| 🔗 **Virtual Hosts** | [İndir](https://github.com/x-falcon/Virtual-Hosts/releases/download/2.1.0/app-Github-release.apk) |
 
-> ⚠️ **Termux'u Google Play'den indirmeyin!** Resmi GitHub sürümünü kullanın.
+> ⚠️ **Termux'u Google Play'den indirme!** Yukarıdaki GitHub linkini kullan.
 
 ---
 
 ## ⚙️ Kurulum
 
-### 1️⃣ Adım — Termux'u Aç ve Paketleri Güncelle
+### 1️⃣ Termux'u aç ve paketleri güncelle
 
 ```bash
 pkg update && pkg upgrade -y
 ```
 
-### 2️⃣ Adım — Gerekli Kütüphaneleri Kur
+### 2️⃣ Gerekli kütüphaneleri kur
 
 ```bash
 pkg install -y wget curl openssl libenet liblua53
 ```
 
-### 3️⃣ Adım — Proxy'yi Kur (Tek Komut)
+### 3️⃣ Proxy'yi indir ve kur
 
 ```bash
-wget https://github.com/KULLANICI_ADIN/REPO_ADIN/raw/main/install.sh && bash install.sh
+wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/proxy_linux -O proxy_linux && chmod +x proxy_linux
 ```
-
-> 💡 Yukarıdaki komut tüm dosyaları otomatik indirir ve gerekli izinleri ayarlar.
 
 ---
 
 ## ▶️ Kullanım
 
-Kurulum tamamlandıktan sonra proxy'yi başlatmak için:
+Kurulum bittikten sonra proxy'yi başlatmak için:
 
 ```bash
 ./proxy_linux
 ```
 
-Eğer proxy daha önce kurulduysa ve tekrar çalıştırmak istiyorsan:
-
-```bash
-cd ~ && ./proxy_linux
-```
-
 ---
 
-## 🗂️ Host Dosyası Kurulumu
+## 🗂️ Host Dosyası
 
-**Virtual Hosts** uygulamasına aşağıdaki host dosyasını ekle:
+**Virtual Hosts** uygulamasına eklemen gereken host dosyası:
 
-📄 **hosts.txt** → [İndir]([https://raw.githubusercontent.com/KULLANICI_ADIN/REPO_ADIN/main/host](https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/kulohosts))
+📄 **[kulohosts dosyasını buradan indir](https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/kulohosts)**
 
-Veya Termux üzerinden otomatik indir:
+Ya da Termux ile direkt indir:
 
 ```bash
-wget https://raw.githubusercontent.com/KULLANICI_ADIN/REPO_ADIN/main/host -O /sdcard/hosts.txt
+wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/kulohosts -O /sdcard/kulohosts.txt
 ```
+
+Sonra **Virtual Hosts** uygulamasını aç → **Hosts File** sekmesine gel → `kulohosts.txt` dosyasını seç → Aktive et.
 
 ---
 
 ## 🔧 Sorun Giderme
 
 <details>
-<summary><b>❌ "Permission denied" hatası alıyorum</b></summary>
+<summary><b>❌ "Permission denied" hatası</b></summary>
 
 ```bash
 chmod +x proxy_linux
@@ -104,27 +126,27 @@ chmod +x proxy_linux
 </details>
 
 <details>
-<summary><b>❌ Kütüphane bulunamıyor hatası</b></summary>
+<summary><b>❌ Kütüphane bulunamıyor</b></summary>
 
 ```bash
-pkg install -y libenet liblua53 openssl-tool
+pkg install -y libenet liblua53 openssl-tool curl wget
 ```
 
 </details>
 
 <details>
-<summary><b>❌ Proxy başlıyor ama Growtopia bağlanmıyor</b></summary>
+<summary><b>❌ Proxy çalışıyor ama Growtopia bağlanmıyor</b></summary>
 
-- Virtual Hosts uygulamasının aktif olduğundan emin ol
-- hosts.txt dosyasının doğru yüklendiğini kontrol et
-- PowerTunnel'ın çalışıp çalışmadığını kontrol et
+- Virtual Hosts uygulamasının **aktif** olduğundan emin ol
+- `kulohosts.txt` dosyasının doğru yüklendiğini kontrol et
+- PowerTunnel çalışıyor mu kontrol et
 
 </details>
 
 <details>
 <summary><b>❌ items.dat hatası</b></summary>
 
-Proxy'yi kullanmadan önce Growtopia'ya **normal şekilde giriş yap** ve items.dat'ı indirmesini bekle, sonra proxy'yi başlat.
+Proxy'yi başlatmadan önce Growtopia'ya **normal şekilde giriş yap** ve items.dat indirmesini bekle. Sonra proxy'yi çalıştır.
 
 </details>
 
@@ -132,25 +154,20 @@ Proxy'yi kullanmadan önce Growtopia'ya **normal şekilde giriş yap** ve items.
 
 ## 📝 Notlar
 
-> 🇹🇷 Proxy'yi kullanmadan önce Growtopia'ya **normal şekilde giriş yapın** ve items.dat'ın indirilmesini bekleyin.
+> 🇹🇷 Proxy'yi kullanmadan önce Growtopia'ya **normal giriş yapın** ve items.dat indirmesini bekleyin.
 
-> 🇺🇸 **Login first** and wait for Growtopia to download items.dat **before** starting the proxy.
-
----
-
-## 💬 Destek
-
-<div align="center">
-
-[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/DISCORD_LINKIN)
-
-</div>
+> 🇺🇸 **Login first** and let Growtopia download items.dat **before** using the proxy.
 
 ---
 
 <div align="center">
 
 **⭐ Beğendiysen yıldız atmayı unutma!**
+
+[![Discord](https://img.shields.io/badge/Discord-discord.gg%2FKulo-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Kulo)
+[![GitHub](https://img.shields.io/badge/GitHub-spy1337xasx%2FKuloAndroid-181717?style=for-the-badge&logo=github)](https://github.com/spy1337xasx/KuloAndroid)
+
+<br/>
 
 Made with ❤️ for Growtopia Android Community
 
