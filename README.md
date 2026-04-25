@@ -6,7 +6,7 @@
 
 ![Platform](https://img.shields.io/badge/Platform-Android-brightgreen?style=for-the-badge&logo=android)
 ![Shell](https://img.shields.io/badge/Shell-Bash-blue?style=for-the-badge&logo=gnu-bash)
-![License](https://img.shields.io/badge/License-Free-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Paid-orange?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
 > **Growtopia için Android üzerinde çalışan hızlı ve kolay kurulumlu proxy.**
@@ -81,7 +81,7 @@ cd ~ && ./proxy_linux
 
 **Virtual Hosts** uygulamasına aşağıdaki host dosyasını ekle:
 
-📄 **hosts.txt** → [İndir](https://raw.githubusercontent.com/KULLANICI_ADIN/REPO_ADIN/main/host)
+📄 **hosts.txt** → [İndir]([https://raw.githubusercontent.com/KULLANICI_ADIN/REPO_ADIN/main/host](https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/kulohosts))
 
 Veya Termux üzerinden otomatik indir:
 
