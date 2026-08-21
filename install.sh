@@ -7,60 +7,54 @@ CYAN='\033[0;36m'
 BOLD='\033[1m'
 NC='\033[0m'
 
+clear
 echo ""
-echo -e "${CYAN}${BOLD}===============================${NC}"
-echo -e "${CYAN}${BOLD}   KuloAndroid Proxy Installer ${NC}"
-echo -e "${CYAN}${BOLD}===============================${NC}"
+echo -e "${CYAN}${BOLD}========================================${NC}"
+echo -e "${CYAN}${BOLD}       KULO ANDROID PROXY INSTALLER     ${NC}"
+echo -e "${CYAN}${BOLD}                 v2.5.0                 ${NC}"
+echo -e "${CYAN}${BOLD}========================================${NC}"
 echo ""
 
-# Paket listesini güncelle
 echo -e "${YELLOW}[*] Paket listesi güncelleniyor...${NC}"
-apt-get update -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" > /dev/null 2>&1
+pkg update -y > /dev/null 2>&1
 echo -e "${GREEN}[+] Paket listesi güncellendi.${NC}"
 echo ""
 
-# Gerekli paketleri tek tek kontrol et ve kur
 PACKAGES="wget curl openssl libenet"
 
 for pkg in $PACKAGES; do
     if dpkg -s "$pkg" > /dev/null 2>&1; then
-        echo -e "${GREEN}[+] $pkg zaten kurulu, atlanıyor.${NC}"
+        echo -e "${GREEN}[+] $pkg zaten kurulu.${NC}"
     else
         echo -e "${YELLOW}[*] $pkg kuruluyor...${NC}"
-        apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" "$pkg" > /dev/null 2>&1
-        if dpkg -s "$pkg" > /dev/null 2>&1; then
+        pkg install -y "$pkg" > /dev/null 2>&1
+        if [ $? -eq 0 ]; then
             echo -e "${GREEN}[+] $pkg başarıyla kuruldu.${NC}"
         else
-            echo -e "${RED}[-] $pkg kurulamadı, pkg ile deneniyor...${NC}"
-            pkg install -y "$pkg" > /dev/null 2>&1
-            if dpkg -s "$pkg" > /dev/null 2>&1; then
-                echo -e "${GREEN}[+] $pkg başarıyla kuruldu.${NC}"
-            else
-                echo -e "${RED}[!] $pkg kurulamadı. Devam ediliyor...${NC}"
-            fi
+            echo -e "${RED}[!] $pkg kurulamadı!${NC}"
         fi
     fi
 done
 
 echo ""
-
-# proxy_linux dosyasını indir
-echo -e "${YELLOW}[*] proxy_linux indiriliyor...${NC}"
-curl -L -o proxy_linux "https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/proxy_linux" 2>/dev/null
-
-if [ -f "proxy_linux" ] && [ -s "proxy_linux" ]; then
+echo -e "${YELLOW}[*] Proxy izinleri ayarlanıyor...${NC}"
+if [ -f "proxy_android" ]; then
+    chmod +x proxy_android
+    ln -sf proxy_android proxy_linux 2>/dev/null
+    echo -e "${GREEN}[+] İzinler başarıyla verildi.${NC}"
+elif [ -f "proxy_linux" ]; then
     chmod +x proxy_linux
-    echo -e "${GREEN}[+] proxy_linux indirildi ve izinler ayarlandı.${NC}"
+    ln -sf proxy_linux proxy_android 2>/dev/null
+    echo -e "${GREEN}[+] İzinler başarıyla verildi.${NC}"
 else
-    echo -e "${RED}[!] proxy_linux indirilemedi. İnternet bağlantınızı kontrol edin.${NC}"
-    exit 1
+    echo -e "${RED}[!] proxy_android dosyası bulunamadı!${NC}"
 fi
 
 echo ""
-echo -e "${CYAN}${BOLD}===============================${NC}"
-echo -e "${GREEN}${BOLD} Kurulum tamamlandı!${NC}"
-echo -e "${CYAN}${BOLD}===============================${NC}"
+echo -e "${CYAN}${BOLD}========================================${NC}"
+echo -e "${GREEN}${BOLD}[✓] KURULUM BAŞARIYLA TAMAMLANDI!${NC}"
+echo -e "${CYAN}${BOLD}========================================${NC}"
 echo ""
-echo -e " Başlatmak için: ${BOLD}./proxy_linux${NC}"
-echo -e " Lisans için:    ${BOLD}discord.gg/Kulo${NC}"
+echo -e "${YELLOW}Proxy'yi başlatmak için:${NC}"
+echo -e "${CYAN}${BOLD}./proxy_android${NC}"
 echo ""
