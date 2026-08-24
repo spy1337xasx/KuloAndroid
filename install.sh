@@ -1,5 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+# Renkler
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -15,11 +16,13 @@ echo -e "${CYAN}${BOLD}                 v2.5.0                 ${NC}"
 echo -e "${CYAN}${BOLD}========================================${NC}"
 echo ""
 
+# Paket listesini güncelle
 echo -e "${YELLOW}[*] Paket listesi güncelleniyor...${NC}"
 pkg update -y > /dev/null 2>&1
 echo -e "${GREEN}[+] Paket listesi güncellendi.${NC}"
 echo ""
 
+# Gerekli paketleri kontrol et ve kur
 PACKAGES="wget curl openssl libenet"
 
 for pkg in $PACKAGES; do
@@ -55,6 +58,6 @@ echo -e "${CYAN}${BOLD}========================================${NC}"
 echo -e "${GREEN}${BOLD}[✓] KURULUM BAŞARIYLA TAMAMLANDI!${NC}"
 echo -e "${CYAN}${BOLD}========================================${NC}"
 echo ""
-echo -e "${YELLOW}Proxy'yi başlatmak için:${NC}"
+echo -e "${YELLOW}Proxy'yi başlatmak için alttaki komutu yazın:${NC}"
 echo -e "${CYAN}${BOLD}./proxy_android${NC}"
 echo ""
