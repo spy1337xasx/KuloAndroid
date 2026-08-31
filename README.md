@@ -1,17 +1,18 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&pause=1000&color=00D9FF&center=true&vCenter=true&width=700&lines=KuloAndroid+Proxy;Growtopia+%7C+Android+%7C+Termux" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=34&pause=1000&color=00D9FF&center=true&vCenter=true&width=700&lines=KuloAndroid+Proxy;Growtopia+%7C+Android+%7C+Termux;The+Most+Advanced+Mobile+Proxy" alt="Typing SVG" />
 
 <br/>
 
 ![Platform](https://img.shields.io/badge/Platform-Android-brightgreen?style=for-the-badge&logo=android)
-![Shell](https://img.shields.io/badge/Shell-Bash-blue?style=for-the-badge&logo=gnu-bash)
+![Shell](https://img.shields.io/badge/Shell-Termux-blue?style=for-the-badge&logo=gnu-bash)
+![Architecture](https://img.shields.io/badge/Arch-ARM64%20%7C%20ARM32-orange?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Online%20%26%20Active-success?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-Paid-red?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
 <br/>
 
-> **Android üzerinde Termux ile çalışan Growtopia Proxy.**
+> ⚡ **Android cihazlarda Termux ile çalışan, yüksek performanslı ve tam donanımlı Growtopia Proxy.**
 
 </div>
 
@@ -23,8 +24,8 @@
 
 ---
 
-### 🇹🇷 Bu proxy **ücretlidir** ve lisans satın alınmadan kullanılamaz.
-### 🇺🇸 This proxy is **paid** and cannot be used without purchasing a license.
+### 🇹🇷 Bu proxy **ücretli ve lisans korumalıdır**. Lisans almadan kullanılamaz.
+### 🇺🇸 This proxy is **paid and license protected**. Cannot be used without purchasing a key.
 
 ---
 
@@ -32,9 +33,9 @@
 
 ---
 
-> 🇹🇷 Lisans satın almak için yukarıdaki Discord sunucumuza katıl ve yetkililere ulaş.
-
-> 🇺🇸 Join our Discord server above to purchase a license and contact our staff.
+> 🇹🇷 **Lisans / Satın Alım:** Yukarıdaki Discord sunucumuza katılıp yetkililerden lisans anahtarınızı teslim alabilirsiniz.
+> 
+> 🇺🇸 **License / Purchase:** Join our Discord server above and create a ticket to get your access license.
 
 ---
 
@@ -42,133 +43,134 @@
 
 ---
 
-## 📋 İçindekiler
+## 📑 İçindekiler / Table of Contents
 
-- [Gereksinimler](#-gereksinimler)
-- [Kurulum](#-kurulum)
-- [Kullanım](#-kullanım)
-- [Host Dosyası](#-host-dosyası)
-- [Sorun Giderme](#-sorun-giderme)
-- [Notlar](#-notlar)
-
----
-
-## 📦 Gereksinimler
-
-| Uygulama | Link |
-|----------|------|
-| 📱 **Termux** | [GitHub Releases](https://github.com/termux/termux-app/releases) |
-| 🌐 **PowerTunnel** | [İndir](https://github.com/krlvm/PowerTunnel-Android/releases/download/v2.6.3/PowerTunnel.apk) |
-| 🔗 **Virtual Hosts** | [İndir](https://github.com/x-falcon/Virtual-Hosts/releases/download/2.1.0/app-Github-release.apk) |
-
-> ⚠️ **Termux'u Google Play'den indirme!** Yukarıdaki GitHub linkini kullan.
+- [📦 Gerekli Uygulamalar](#-gerekli-uygulamalar)
+- [⚠️ Önemli Ön Hazırlık (Özel DNS Kapatma)](#-önemli-ön-hazırlık-özel-dns-kapatma)
+- [🚀 1-Tık Kolay Kurulum (Termux)](#-1-tık-kolay-kurulum-termux)
+- [🌐 Host Kurulumu (Virtual Hosts)](#-host-kurulumu-virtual-hosts)
+- [▶️ Proxy'yi Başlatma ve Oyuna Giriş](#️-proxyyi-başlatma-ve-oyuna-giriş)
+- [🛠️ Sık Karşılaşılan Sorunlar ve Çözümleri](#️-sık-karşılaşılan-sorunlar-ve-çözümleri)
+- [⭐ İletişim & Destek](#-iletişim--destek)
 
 ---
 
-## ⚙️ Kurulum
+## 📦 Gerekli Uygulamalar
 
-### 1️⃣ Termux'u aç ve paketleri güncelle
+Kuruluma başlamadan önce telefonunuza sadece şu **2 uygulamayı** indirip yükleyin:
 
-```bash
-pkg update && pkg upgrade -y
-```
-
-### 2️⃣ Gerekli kütüphaneleri kur
-
-```bash
-pkg install -y wget curl openssl libenet liblua53
-```
-
-### 3️⃣ Proxy'yi indir ve kur
-
-```bash
-wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/proxy_linux -O proxy_linux && chmod +x proxy_linux
-```
+| Simge | Uygulama Adı | İndirme Bağlantısı | Açıklama |
+| :---: | :--- | :---: | :--- |
+| 📱 | **Termux (F-Droid / GitHub)** | [İndir (.apk)](https://github.com/termux/termux-app/releases/download/v0.118.1/termux-app_v0.118.1+github-debug_arm64-v8a.apk) | ⚠️ **Google Play'den İNDİRMEYİN!** Eski sürümdür. |
+| 🔗 | **Virtual Hosts** | [İndir (.apk)](https://github.com/x-falcon/Virtual-Hosts/releases/download/2.1.0/app-Github-release.apk) | Proxy trafiğini yönlendirmek için gereklidir. |
 
 ---
 
-## ▶️ Kullanım
+## ⚠️ Önemli Ön Hazırlık (Özel DNS Kapatma)
 
-Kurulum bittikten sonra proxy'yi başlatmak için:
+> 🔴 **DİKKAT:** Telefonunuzda **Özel DNS (Private DNS)** açık ise Virtual Hosts proxy'yi yönlendiremez ve oyun bağlantınız kopar! Kurulumdan önce mutlaka kapatın:
 
-```bash
-./proxy_linux
-```
-
----
-
-## 🗂️ Host Dosyası
-
-**Virtual Hosts** uygulamasına eklemen gereken host dosyası:
-
-📄 **[kulohosts dosyasını buradan indir](https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/kulohosts)**
-
-Ya da Termux ile direkt indir:
-
-```bash
-wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/kulohosts -O /sdcard/kulohosts.txt
-```
-
-Sonra **Virtual Hosts** uygulamasını aç → **Hosts File** sekmesine gel → `kulohosts.txt` dosyasını seç → Aktive et.
+### 📱 Özel DNS Nasıl Kapatılır?
+1. Telefonunuzun **Ayarlar (Settings)** menüsünü açın.
+2. **Bağlantılar (Connections)** veya **Ağ ve İnternet (Network & Internet)** seçeneğine dokunun.
+3. **Diğer Bağlantı Ayarları (More Connection Settings)** bölümüne girin.
+4. **Özel DNS (Private DNS)** alanına dokunun ve **"Kapalı" (Off / Disabled)** seçeneğini işaretleyip kaydedin.
 
 ---
 
-## 🔧 Sorun Giderme
+## 🚀 1-Tık Kolay Kurulum (Termux)
+
+Termux uygulamasını açın ve aşağıdaki komutu **tek parça halinde kopyalayıp Termux'a yapıştırın** ve Enter'a basın:
+
+```bash
+pkg update && pkg upgrade -y && pkg install -y wget curl openssl libenet liblua53 && wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/proxy_android -O proxy_android && chmod +x proxy_android
+```
+
+*(Bu komut gerekli tüm paketleri otomatik kurar, proxy dosyasını çeker ve çalıştırma yetkisi verir.)*
+
+---
+
+## 🌐 Host Kurulumu (Virtual Hosts)
+
+1. **Host Dosyasını İndirin:**
+   * Termux üzerinden doğrudan telefonunuza indirmek için şu komutu çalıştırın:
+     ```bash
+     curl -s https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/kulohosts -o /sdcard/kulohosts.txt
+     ```
+   * *Veya tarayıcıdan indirmek için:* [kulohosts.txt İndir](https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/kulohosts)
+
+2. **Virtual Hosts Uygulamasını Açın:**
+   * **`SELECT HOSTS FILE`** butonuna basın.
+   * Telefonunuzun ana dizinindeki **`kulohosts.txt`** dosyasını seçin.
+   * Ana ekrandaki büyük **Aç/Kapa (ON)** butonuna basarak **Yeşil (Aktif)** hale getirin.
+
+---
+
+## ▶️ Proxy'yi Başlatma ve Oyuna Giriş
+
+1. **Termux'a Gelin** ve proxy'yi başlatın:
+   ```bash
+   ./proxy_android
+   ```
+2. Proxy lisansınızı doğruladıktan sonra `[SERVER] Proxy started on port 17198...` mesajı gelecektir.
+3. **Growtopia'yı Açın** ve normal şekilde **Connect** butonuna basarak oyuna girin!
+4. Oyunda sohbet alanına **/proxy** veya **/menu** yazarak özellikleri kullanabilirsiniz.
+
+---
+
+## 🛠️ Sık Karşılaşılan Sorunlar ve Çözümleri
 
 <details>
-<summary><b>❌ "Permission denied" hatası</b></summary>
+<summary><b>❌ 1. "Permission denied" Hatası Alıyorum</b></summary>
 
+Dosya çalıştırma izni eksiktir. Termux'a şu komutu yazın:
 ```bash
-chmod +x proxy_linux
-./proxy_linux
+chmod +x proxy_android && ./proxy_android
 ```
-
 </details>
 
 <details>
-<summary><b>❌ Kütüphane bulunamıyor</b></summary>
+<summary><b>❌ 2. Proxy Çalışıyor Ama Growtopia Orijinal Sunucuya Bağlanıyor</b></summary>
 
+- **Özel DNS (Private DNS)** açık kalmış olabilir. Ayarlardan kapalı olduğundan emin olun.
+- **Virtual Hosts** uygulamasının açık ve butonun **Yeşil (ON)** olduğunu kontrol edin.
+- `kulohosts.txt` dosyasının doğru seçildiğinden emin olun.
+</details>
+
+<details>
+<summary><b>❌ 3. "Unable to resolve host" veya "Paket Yüklenemedi" Hatası</b></summary>
+
+Termux depo adreslerini yenilemek için:
 ```bash
-pkg install -y libenet liblua53 openssl-tool curl wget
+termux-change-repo
 ```
-
+*(Açılan menüde ilk seçeneği seçip OK deyin, ardından `pkg update -y` çalıştırın.)*
 </details>
 
 <details>
-<summary><b>❌ Proxy çalışıyor ama Growtopia bağlanmıyor</b></summary>
+<summary><b>❌ 4. items.dat Hatası</b></summary>
 
-- Virtual Hosts uygulamasının **aktif** olduğundan emin ol
-- `kulohosts.txt` dosyasının doğru yüklendiğini kontrol et
-- PowerTunnel çalışıyor mu kontrol et
-
-</details>
-
-<details>
-<summary><b>❌ items.dat hatası</b></summary>
-
-Proxy'yi başlatmadan önce Growtopia'ya **normal şekilde giriş yap** ve items.dat indirmesini bekle. Sonra proxy'yi çalıştır.
-
+Proxy'yi açmadan önce Growtopia'ya **normal şekilde 1 kez giriş yapın** ve items.dat dosyasının telefonunuza inmesini bekleyin. Ardından proxy üzerinden bağlanın.
 </details>
 
 ---
 
-## 📝 Notlar
+## 📝 Önemli Tavsiyeler & Notlar
 
-> 🇹🇷 Proxy'yi kullanmadan önce Growtopia'ya **normal giriş yapın** ve items.dat indirmesini bekleyin.
-
-> 🇺🇸 **Login first** and let Growtopia download items.dat **before** using the proxy.
+* 💡 Telefonunuzu yeniden başlattığınızda sadece **Virtual Hosts**'u aktif edip Termux'ta `./proxy_android` yazmanız yeterlidir; tekrar kurulum yapmanıza gerek yoktur.
+* 🛡️ Ban koruması ve güncel proxy yenilikleri için Discord duyurularımızı takip edin.
 
 ---
 
 <div align="center">
 
-**⭐ Beğendiysen yıldız atmayı unutma!**
+### 🌟 Projeyi Beğendiyseniz Yıldız (Star) Vermeyi Unutmayın!
 
 [![Discord](https://img.shields.io/badge/Discord-discord.gg%2FKulo-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Kulo)
 [![GitHub](https://img.shields.io/badge/GitHub-spy1337xasx%2FKuloAndroid-181717?style=for-the-badge&logo=github)](https://github.com/spy1337xasx/KuloAndroid)
 
 <br/>
 
-Made with ❤️ for Growtopia Android Community
+**Made with ❤️ for Growtopia Android Community**
 
 </div>
