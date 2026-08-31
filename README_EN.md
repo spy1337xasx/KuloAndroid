@@ -12,7 +12,7 @@
 
 <br/>
 
-[🇹🇷 Türkçe'ye Geç](README_TR.md) • [🌐 Main Page](README.md)
+[🇹🇷 Türkçe Rehbere Geç](README_TR.md) • [🌐 Main Page](README.md)
 
 </div>
 
@@ -24,7 +24,7 @@
 
 ---
 
-### 🇺🇸 This proxy is **paid and license protected**. Cannot be used without purchasing a key.
+### 🇺🇸 This proxy is **paid and license protected**. It cannot be used without a license key.
 
 ---
 
@@ -32,7 +32,7 @@
 
 ---
 
-> 🇺🇸 **License / Purchase:** Join our Discord server above and create a ticket to get your access license.
+> 🇺🇸 **Purchase License:** Join our Discord server above and open a ticket to obtain your license key.
 
 ---
 
@@ -40,7 +40,17 @@
 
 ---
 
-## 📦 1. Required Applications
+## 🔄 Already Installed? 1-Click Update (For Other Devices)
+
+If you already have an older version installed and want to update to the latest release, simply paste this single command into Termux:
+
+```bash
+wget -q https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/proxy_android -O proxy_android && chmod +x proxy_android && ./proxy_android
+```
+
+---
+
+## 📦 1. Required Applications (For Fresh Setup)
 
 Before setting up, install only these **2 applications** on your Android device:
 
@@ -55,11 +65,11 @@ Before setting up, install only these **2 applications** on your Android device:
 
 > 🔴 **IMPORTANT:** If **Private DNS** is enabled on your phone, Virtual Hosts will NOT route traffic! Turn it off before starting:
 
-### 📱 How to Disable Private DNS?
-1. Open your phone's **Settings**.
+### 📱 How to Turn Off Private DNS?
+1. Open your device **Settings**.
 2. Go to **Connections** (or **Network & Internet**).
-3. Tap on **More connection settings**.
-4. Select **Private DNS** and set it to **"Off" / "Disabled"**.
+3. Tap **More connection settings**.
+4. Select **Private DNS** and set it to **Off**.
 
 ---
 
@@ -68,7 +78,7 @@ Before setting up, install only these **2 applications** on your Android device:
 Open Termux and run this single command:
 
 ```bash
-pkg update && pkg upgrade -y && pkg install -y wget curl openssl libenet liblua53 && wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/proxy_android -O proxy_android && chmod +x proxy_android
+pkg update && pkg upgrade -y && pkg install -y openssl libcurl wget curl && wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/proxy_android -O proxy_android && wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/items.dat -O items.dat && chmod +x proxy_android
 ```
 
 ---
@@ -120,25 +130,16 @@ chmod +x proxy_android && ./proxy_android
 </details>
 
 <details>
-<summary><b>❌ 3. "Unable to resolve host" or package installation error</b></summary>
+<summary><b>❌ 3. Package installation error in Termux</b></summary>
 
-```bash
-termux-change-repo
-```
-*(Select the first mirror option and press OK, then run `pkg update -y`)*
-</details>
-
-<details>
-<summary><b>❌ 4. items.dat error</b></summary>
-
-Log in once normally to Growtopia without proxy so it downloads items.dat first.
+Run `termux-change-repo` in Termux, select the first mirror, then retry.
 </details>
 
 ---
 
 <div align="center">
 
-### 🌟 If you like this project, please give a Star!
+### 🌟 If you liked this project, please give it a Star!
 
 [![Discord](https://img.shields.io/badge/Discord-discord.gg%2FKulo-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Kulo)
 [![GitHub](https://img.shields.io/badge/GitHub-spy1337xasx%2FKuloAndroid-181717?style=for-the-badge&logo=github)](https://github.com/spy1337xasx/KuloAndroid)

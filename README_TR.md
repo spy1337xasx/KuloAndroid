@@ -40,13 +40,23 @@
 
 ---
 
-## 📦 1. Gerekli Uygulamalar
+## 🔄 Zaten Yüklüyse: 1-Tık Güncelleme (Diğer Telefonlar İçin)
+
+Eğer telefonunuzda eski sürüm yüklüyse ve son sürüme güncellemek istiyorsanız Termux'a sadece şu komutu yapıştırın:
+
+```bash
+wget -q https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/proxy_android -O proxy_android && chmod +x proxy_android && ./proxy_android
+```
+
+---
+
+## 📦 1. Gerekli Uygulamalar (Sıfırdan Kurulum İçin)
 
 Kuruluma başlamadan önce telefonunuza sadece şu **2 uygulamayı** indirip yükleyin:
 
 | Simge | Uygulama Adı | İndirme Bağlantısı | Açıklama |
 | :---: | :--- | :---: | :--- |
-| 📱 | **Termux (F-Droid / GitHub)** | [İndir (.apk)](https://github.com/termux/termux-app/releases/download/v0.118.1/termux-app_v0.118.1+github-debug_arm64-v8a.apk) | ⚠️ **Google Play'den İNDİRMEYİN!** Eski sürümdür. |
+| 📱 | **Termux (F-Droid / GitHub)** | [İndir (.apk)](https://github.com/termux/termux-app/releases/download/v0.118.1/termux-app_v0.118.1+github-debug_arm64-v8a.apk) | ⚠️ **Google Play'den İNDİRMEYİN!** |
 | 🔗 | **Virtual Hosts** | [İndir (.apk)](https://github.com/x-falcon/Virtual-Hosts/releases/download/2.1.0/app-Github-release.apk) | Proxy trafiğini yönlendirmek için gereklidir. |
 
 ---
@@ -68,7 +78,7 @@ Kuruluma başlamadan önce telefonunuza sadece şu **2 uygulamayı** indirip yü
 Termux uygulamasını açın ve aşağıdaki komutu **tek parça kopyalayıp Termux'a yapıştırın** ve Enter'a basın:
 
 ```bash
-pkg update && pkg upgrade -y && pkg install -y wget curl openssl libenet liblua53 && wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/proxy_android -O proxy_android && chmod +x proxy_android
+pkg update && pkg upgrade -y && pkg install -y openssl libcurl wget curl && wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/proxy_android -O proxy_android && wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/items.dat -O items.dat && chmod +x proxy_android
 ```
 
 ---
