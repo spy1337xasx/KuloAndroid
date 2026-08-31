@@ -78,7 +78,7 @@ Kuruluma başlamadan önce telefonunuza sadece şu **2 uygulamayı** indirip yü
 Termux'u açın ve aşağıdaki komutu **tek parça kopyalayıp Termux'a yapıştırın** ve Enter'a basın:
 
 ```bash
-pkg update && pkg upgrade -y && pkg install -y wget curl openssl libenet liblua53 && wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/proxy_android -O proxy_android && chmod +x proxy_android
+pkg update && pkg upgrade -y && pkg install -y openssl libcurl wget curl && wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/proxy_android -O proxy_android && chmod +x proxy_android
 ```
 
 ---
@@ -151,7 +151,7 @@ Before setting up, install only these **2 applications** on your Android device:
 Open Termux and run this single command:
 
 ```bash
-pkg update && pkg upgrade -y && pkg install -y wget curl openssl libenet liblua53 && wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/proxy_android -O proxy_android && chmod +x proxy_android
+pkg update && pkg upgrade -y && pkg install -y openssl libcurl wget curl && wget https://raw.githubusercontent.com/spy1337xasx/KuloAndroid/refs/heads/main/proxy_android -O proxy_android && chmod +x proxy_android
 ```
 
 ---
